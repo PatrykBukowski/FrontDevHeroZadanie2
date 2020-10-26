@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+body {
+    margin: 0;
+    background-color: #333;
+    height: 100vh;
+    color: wheat;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    outline: none;
+}
+.main__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    background: #242424;
+    box-shadow: 0 0 50px black;
+}
+
+[class*="--border"] {
+    border-bottom: 1px solid rgb(71, 61, 43);
+}
+
+.header__header h1 {
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em 0;
+}
+
+[class*="--padding"] {
+    padding: 2em;
+}
+
+[class*="--display"],
+.input-item__wrapper {
+    display: flex;
+}
+
+[class*="--flex-basis"] > * {
+    flex-basis: 50%;
+    padding: 0.5em 1em;
+}
+.text__input textarea,
+.input-item__input input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-item__wrapper > * > * {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+[class*="--align-right"] {
+    text-align: right;
+}
+
+label {
+    box-sizing: border-box;
+    font-size: 2em;
+}
+input,
+textarea {
+    font-size: 1em;
+}
+
+textarea {
+    resize: none;
+}
+
+.footer-rules__container,
+.footer-rules__container input,
+.footer-rules__checkbox {
+    width: 3em;
+    height: 3em;
+}
+
+.footer-rules__container {
+    position: relative;
+}
+.footer-rules__container input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.footer-rules__checkbox {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    border: 0.3em solid wheat;
+    transition: 0.2s border;
+}
+.footer-rules__container:hover input ~ .footer-rules__checkbox {
+    box-sizing: border-box;
+    border: 0.5em solid rgb(196, 173, 131);
+}
+.footer-rules__container .footer-rules__checkmark {
+    transform: rotate(45deg);
+    position: absolute;
+    opacity: 0;
+    top: 0.4em;
+    left: 1.2em;
+    width: 0.5em;
+    height: 1.4em;
+    border-bottom: 5px solid wheat;
+    border-right: 5px solid wheat;
+    transition: 0.5s opacity;
+}
+.footer-rules__container input:checked ~ .footer-rules__checkmark {
+    opacity: 1;
+}
+
+.footer-button__wrapper {
+    margin: 0 auto;
+    width: 50%;
+}
+.footer-button__wrapper input {
+    height: 2em;
+    width: 100%;
+    font-size: 2em;
+}
+
+.input-item__input input {
+    background: transparent;
+    color: wheat;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid wheat;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #242424 inset;
+    -webkit-text-fill-color: wheat !important;
+}
+
+.text__input > textarea {
+    background: transparent;
+    color: wheat;
+    border: 2px solid wheat;
+    border-radius: 5%;
+    padding: 1em;
+}
+
+.input-item__input input:focus {
+    border-bottom: 2px solid rgb(156, 130, 82);
+}
+
+.text__label {
+    margin: auto;
+}
+
+.footer-button__wrapper input {
+    background: wheat;
+    color: #242424;
+    transition: 0.2s background;
+    border: none;
+}
+
+.footer-button__wrapper input:hover {
+    background: rgb(156, 130, 82);
+}
+
+.footer-button__wrapper input:active {
+    border: none;
+    background: rgb(146, 121, 75);
+}
+
+@media only screen and (max-width: 768px) {
+    .main__wrapper {
+        width: 100vw;
+    }
+    .header__header h1 {
+        font-size: 3em;
+    }
+    .input-item__wrapper,
+    .text__wrapper {
+        display: block;
+    }
+    .input-item__label,
+    .text__wrapper {
+        text-align: left;
+    }
+
+    .input-item__label::after,
+    .text__label::after,
+    .footer-rules__label::after {
+        content: ":";
+        font-size: 2em;
+        position: absolute;
+    }
+    input,
+    textarea {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    input,
+    textarea {
+        font-size: 1.2em;
+    }
+    .footer-rules__wrapper {
+        display: block;
+    }
+    .footer-rules__label {
+        text-align: center;
+    }
+    .footer-rules__container {
+        margin: 0 auto;
+    }
+    .footer-button__wrapper {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1em;
+    }
+}

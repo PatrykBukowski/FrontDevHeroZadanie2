@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main__wrapper">
+            <form action="#" method="POST">
+                <div class="header__wrapper wrapper--border">
+                    <div class="header__header">
+                        <h1>Formularz</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="input__wrapper --border input__wrapper--padding"
+                >
+                    <div class="input-item__wrapper --flex-basis">
+                        <div class="input-item__label --align-right">
+                            <label for="name">Imię</label>
+                        </div>
+
+                        <div class="input-item__input">
+                            <input type="text" name="name" id="name" />
+                        </div>
+                    </div>
+
+                    <div class="input-item__wrapper --flex-basis">
+                        <div class="input-item__label --align-right">
+                            <label for="mail">Mail</label>
+                        </div>
+
+                        <div class="input-item__input">
+                            <input type="email" name="mail" id="mail" />
+                        </div>
+                    </div>
+
+                    <div class="input-item__wrapper --flex-basis">
+                        <div class="input-item__label --align-right">
+                            <label for="tel">Telefon</label>
+                        </div>
+
+                        <div class="input-item__input">
+                            <input type="tel" name="tel" id="tel" />
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="text__wrapper --border--padding--display--flex-basis--align-right"
+                >
+                    <div class="text__label">
+                        <label for="message">Wiadomość</label>
+                    </div>
+
+                    <div class="text__input">
+                        <textarea
+                            name="message"
+                            id="message"
+                            rows="10"
+                            maxlength="250"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div class="footer__wrapper --padding">
+                    <div class="footer-rules__wrapper --display--flex-basis--align-right">
+                        <div class="footer-rules__label">
+                            <label for="rules">Regulamin</label>
+                        </div>
+
+                        <div class="footer-rules__input">
+                            <div class="footer-rules__container">
+                                <input
+                                    type="checkbox"
+                                    name="rules"
+                                    id="rules"
+                                />
+                                <div class="footer-rules__checkbox"></div>
+                                <div class="footer-rules__checkmark"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="footer-button__wrapper --padding"
+                    >
+                        <input type="button" value="Submit" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
